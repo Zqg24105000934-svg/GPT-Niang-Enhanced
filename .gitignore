@@ -40,5 +40,11 @@ local-assets/
 *.mp3
 *.mp4
 *.webm
+# Explicitly published character assets. All other media remain private by default.
+!gpt-niang-usage/assets/gpt-dragon-niang-fullbody.png
+!gpt-niang-usage/assets/gpt-dragon-niang-winged-v2.png
+!gpt-niang-usage/assets/pet-rig-chibi-v1.png
+!gpt-niang-usage/assets/pet-rig-winged-v1.png
+!gpt-niang-usage/assets/pet-rig-chibi-dress-v1.png
 .DS_Store
 Thumbs.db

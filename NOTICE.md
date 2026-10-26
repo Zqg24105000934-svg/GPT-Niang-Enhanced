@@ -13,11 +13,11 @@ This public source snapshot includes local enhancements to the macOS companion a
 
 The source adds bounded interaction sessions, articulated pose sampling, blinking, independent arm movement, cutout-atlas rendering, pointer reactions, drag/landing behavior and cadence controls. Enhancement source and the new public documentation are distributed under the repository's MIT license.
 
-## Excluded artwork and audio
+## Character artwork: separate terms
 
-No character images, supplied references, derived icons, texture atlases, previews, screenshots, audio files or video clips are included in this repository. Their rights are not granted by this code license. The upstream `CHARACTER-NOTICE.txt` remains solely as provenance and a warning that the original project's artwork had separate terms.
+The repository now includes two generated full-body illustrations and three cutout texture atlases. These five PNG files are excluded from MIT and are subject to `gpt-niang-usage/assets/ASSET-LICENSE.md` and the retained upstream `CHARACTER-NOTICE.txt`. Permission is limited to the rights the maintainers can grant; third-party reference, character and trademark rights are not granted by the code license.
 
-Users who add artwork are responsible for obtaining the necessary rights. Generated artwork based on a reference does not by itself establish permission to redistribute that reference's character design. The repository does not supply a private asset download URL.
+The original supplied reference photograph, upstream bust image, screenshots, icons, sound and video files are not included. Generated artwork based on a reference does not by itself establish third-party rights. No commercial or standalone asset-pack permission is granted. See `gpt-niang-usage/assets/GENERATED-ASSETS.md` for provenance.
 
 ## Quotation text
 

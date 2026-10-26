@@ -6,7 +6,7 @@ case "$MODE" in --build-only) ;; *) echo "Usage: bash script/build_and_run.sh --
 APP_NAME="GPTNiangEnhanced"
 APP_BUNDLE="$ROOT_DIR/dist/$APP_NAME.app"
 TASK_CACHE="${GPT_NIANG_BUILD_CACHE:-$ROOT_DIR/macos/.build-cache}"
-ASSETS="${GPT_NIANG_ASSETS:-$ROOT_DIR/local-assets}"
+ASSETS="${GPT_NIANG_ASSETS:-$ROOT_DIR/gpt-niang-usage/assets}"
 mkdir -p "$TASK_CACHE/clang" "$TASK_CACHE/swiftpm"
 export CLANG_MODULE_CACHE_PATH="$TASK_CACHE/clang"
 export SWIFTPM_MODULECACHE_OVERRIDE="$TASK_CACHE/clang"
@@ -33,6 +33,7 @@ for asset in gpt-dragon-niang-bust.png gpt-dragon-niang-fullbody.png gpt-dragon-
 done
 cp "$ROOT_DIR/LICENSE" "$ROOT_DIR/NOTICE.md" "$ROOT_DIR/docs/ASSETS.md" "$APP_BUNDLE/Contents/Resources/"
 cp "$ROOT_DIR/gpt-niang-usage/assets/quotes-LICENSE.txt" "$ROOT_DIR/gpt-niang-usage/assets/CHARACTER-NOTICE.txt" "$APP_BUNDLE/Contents/Resources/"
+cp "$ROOT_DIR/gpt-niang-usage/assets/ASSET-LICENSE.md" "$ROOT_DIR/gpt-niang-usage/assets/GENERATED-ASSETS.md" "$APP_BUNDLE/Contents/Resources/"
 PLIST="$APP_BUNDLE/Contents/Info.plist"
 /usr/bin/plutil -create xml1 "$PLIST"
 /usr/bin/plutil -insert CFBundleExecutable -string "$APP_NAME" "$PLIST"
@@ -51,4 +52,4 @@ PLIST="$APP_BUNDLE/Contents/Info.plist"
 /usr/bin/xattr -rd com.apple.ResourceFork "$APP_BUNDLE" 2>/dev/null || true
 /usr/bin/codesign --force --sign - "$APP_BUNDLE/Contents/Helpers/GPTNiangUpdater"
 /usr/bin/codesign --force --deep --sign - "$APP_BUNDLE"
-echo "Built $APP_BUNDLE (private artwork is optional and not included in the repository)."
+echo "Built $APP_BUNDLE (character artwork uses separate non-commercial terms)."
